@@ -1,0 +1,141 @@
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS — Sai Teja Portfolio
+   All visual decisions live here. Change tokens, change the
+   entire site. Components never hard-code values.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Color System ────────────────────────────────────── */
+  --bg-deep:        #08090d;
+  --bg-surface:     #0f1117;
+  --bg-elevated:    #161923;
+  --bg-card:        #11131a;
+
+  --text-primary:   #e8ecf4;
+  --text-secondary: #8b93a7;
+  --text-tertiary:  #4a5168;
+  --text-inverse:   #08090d;
+
+  --accent-primary: #5b9cf5;
+  --accent-teal:    #4fd1c5;
+  --accent-glow:    rgba(91, 156, 245, 0.12);
+  --accent-teal-glow: rgba(79, 209, 197, 0.10);
+
+  --border-subtle:  rgba(139, 147, 167, 0.08);
+  --border-hover:   rgba(139, 147, 167, 0.20);
+  --border-active:  rgba(91, 156, 245, 0.35);
+
+  --overlay-light:  rgba(255, 255, 255, 0.04);
+  --overlay-dark:   rgba(0, 0, 0, 0.5);
+
+  /* ── Typography ──────────────────────────────────────── */
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --fs-display:   clamp(3rem, 10vw, 7rem);
+  --fs-h2:        clamp(2rem, 5vw, 3.5rem);
+  --fs-h3:        clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body:      clamp(0.95rem, 1.2vw, 1.1rem);
+  --fs-body-lg:   clamp(1.05rem, 1.5vw, 1.25rem);
+  --fs-small:     clamp(0.8rem, 1vw, 0.875rem);
+  --fs-label:     0.75rem;
+  --fs-metric:    clamp(2rem, 5vw, 4rem);
+
+  --lh-display:   0.92;
+  --lh-heading:   1.1;
+  --lh-body:      1.65;
+
+  --ls-display:   -0.03em;
+  --ls-heading:   -0.02em;
+  --ls-label:     0.08em;
+  --ls-wide:      0.15em;
+
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  /* ── Spacing Scale ───────────────────────────────────── */
+  --space-xs:     0.25rem;
+  --space-sm:     0.5rem;
+  --space-md:     1rem;
+  --space-lg:     1.5rem;
+  --space-xl:     2rem;
+  --space-2xl:    3rem;
+  --space-3xl:    4rem;
+  --space-4xl:    6rem;
+  --space-5xl:    8rem;
+  --space-section: clamp(5rem, 12vh, 10rem);
+
+  /* ── Radii ───────────────────────────────────────────── */
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    24px;
+  --radius-2xl:   32px;
+  --radius-pill:  999px;
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:    150ms;
+  --duration-normal:  300ms;
+  --duration-slow:    500ms;
+  --duration-slower:  800ms;
+
+  /* ── Z-Index ─────────────────────────────────────────── */
+  --z-particles:  1;
+  --z-content:    10;
+  --z-nav:        100;
+  --z-cursor:     1000;
+  --z-modal:      2000;
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.15);
+  --shadow-glow:  0 0 40px var(--accent-glow), 0 0 80px rgba(91, 156, 245, 0.06);
+
+  /* ── Layout ──────────────────────────────────────────── */
+  --max-width:    1200px;
+  --nav-height:   64px;
+}
+
+/* ── Light Mode Overrides ──────────────────────────────── */
+[data-theme="light"] {
+  --bg-deep:        #f6f7f9;
+  --bg-surface:     #ffffff;
+  --bg-elevated:    #eef0f4;
+  --bg-card:        #ffffff;
+
+  --text-primary:   #1a1d27;
+  --text-secondary: #5a6178;
+  --text-tertiary:  #9ca3b8;
+  --text-inverse:   #f6f7f9;
+
+  --accent-primary: #3b7de0;
+  --accent-teal:    #2ba89e;
+  --accent-glow:    rgba(59, 125, 224, 0.08);
+  --accent-teal-glow: rgba(43, 168, 158, 0.06);
+
+  --border-subtle:  rgba(26, 29, 39, 0.08);
+  --border-hover:   rgba(26, 29, 39, 0.15);
+  --border-active:  rgba(59, 125, 224, 0.30);
+
+  --overlay-light:  rgba(0, 0, 0, 0.03);
+  --overlay-dark:   rgba(0, 0, 0, 0.4);
+
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-glow:  0 0 40px rgba(59, 125, 224, 0.06), 0 0 80px rgba(59, 125, 224, 0.03);
+}
+
+/* ── Reduced Motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:    0ms;
+    --duration-normal:  0ms;
+    --duration-slow:    0ms;
+    --duration-slower:  0ms;
+  }
+}

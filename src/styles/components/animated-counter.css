@@ -1,0 +1,9 @@
+.animated-counter {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--fs-metric);
+  color: var(--text-primary);
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+}

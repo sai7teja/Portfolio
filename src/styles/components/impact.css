@@ -1,0 +1,118 @@
+.impact-section {
+  padding: var(--space-section) var(--space-xl);
+  background-color: var(--bg-surface);
+}
+
+.impact-header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.impact-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-5xl);
+}
+
+.impact-metric-card-inner {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.impact-metric-value-wrapper {
+  margin-bottom: var(--space-sm);
+}
+
+.impact-metric-label {
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.impact-metric-desc {
+  font-size: var(--fs-small);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.impact-metric-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-teal));
+  width: 0%;
+  transition: width 1s var(--ease-out);
+}
+
+.impact-metric-card.is-visible .impact-metric-accent-line {
+  width: 100%;
+}
+
+.impact-certifications {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.impact-certs-header {
+  margin-bottom: var(--space-xl);
+}
+
+.impact-certs-row {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  scrollbar-width: thin;
+}
+
+.impact-cert-card {
+  min-width: 240px;
+  padding: var(--space-lg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  transition: transform var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 0 0 auto;
+}
+
+a.impact-cert-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.impact-cert-title {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.impact-cert-issuer {
+  font-size: var(--fs-label);
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 1024px) {
+  .impact-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-cert-card {
+    min-width: 200px;
+  }
+}

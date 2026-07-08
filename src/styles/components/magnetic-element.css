@@ -1,0 +1,8 @@
+.magnetic-wrapper {
+  display: inline-block;
+}
+
+.magnetic-element {
+  transition: transform var(--duration-slow) var(--ease-spring);
+  will-change: transform;
+}

@@ -228,25 +228,25 @@ export const certifications: Certification[] = [
     title: "Professional Cloud Architect",
     issuer: "Google Cloud",
     status: "earned",
-    href: "https://www.credly.com/users/sai-teja-kanike",
+    href: "https://www.credly.com/badges/37e44ece-a5cd-4905-a3ca-c62ef1b3b424",
   },
   {
     title: "Associate Cloud Engineer",
     issuer: "Google Cloud",
     status: "earned",
-    href: "https://www.credly.com/users/sai-teja-kanike",
+    href: "https://www.credly.com/badges/d0cc4aa0-782a-4868-b24c-e7b7a908b1ca/public_url",
   },
   {
     title: "Cloud Architect — Microsoft Azure",
     issuer: "Udacity Nanodegree",
     status: "earned",
-    href: "https://www.credly.com/badges/37e44ece-a5cd-4905-a3ca-c62ef1b3b424",
+    href: "https://www.udacity.com/certificate/WGRETHSA",
   },
   {
     title: "AZ-900: Azure Fundamentals",
     issuer: "Microsoft",
     status: "earned",
-    href: "https://www.credly.com/badges/d0cc4aa0-782a-4868-b24c-e7b7a908b1ca/public_url",
+    href: "https://www.credly.com/badges/76688178-b95c-45f8-b523-973538e1a7ad/linked_in?t=rb16hq",
   },
 ];
 

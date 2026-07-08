@@ -1,80 +1,107 @@
-# Harsh Goyal — Developer & Designer Portfolio
+# Sai Teja — DevOps Engineer Portfolio
 
-A dark-themed personal portfolio for **Harsh Goyal** — Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah. Focused on UI/UX, front-end development, and GenAI integration.
+A cinematic, immersive portfolio for **K Sai Teja** — DevOps Engineer specializing in Kubernetes orchestration, cloud architecture, and infrastructure automation.
 
-Built with **React + TypeScript + Vite + Tailwind CSS + Framer Motion**. Designed for one-click deployment on **Vercel**.
+Built with **React + TypeScript + Vite + Vanilla CSS + GSAP**.
 
-## Stack
+## ✨ Features
 
-- React 18 / TypeScript
-- Vite (build tool)
-- Tailwind CSS (utility-first styling)
-- Framer Motion (animations + scroll effects)
-- Lucide React (icons)
-- Kanit font (Google Fonts, weights 300–900)
+- **Cinematic hero** — full-bleed video background with gradient overlays and GSAP entrance animations
+- **Scroll-driven text reveal** — word-by-word illumination of the headline as you scroll
+- **Floating particles** — Canvas 2D ambient particle system with mouse parallax
+- **3D tilt cards** — perspective-based hover effect on project and metric cards
+- **Sticky-stacking projects** — cards layer on top of each other as you scroll
+- **Animated counters** — numbers count up from zero when they enter the viewport
+- **Magnetic hover** — interactive elements pull toward the cursor
+- **Custom cursor** — morphing ring cursor that adapts to content type (desktop only)
+- **Auto-hiding nav** — glassmorphic navigation that hides on scroll down, reappears on scroll up
+- **Dark/light mode** — toggle with localStorage persistence
+- **Mobile-optimized** — touch-adapted effects, fluid typography, responsive layouts
+- **Accessibility** — `prefers-reduced-motion` respected, semantic HTML, focus-visible states
 
-## Sections
+## 🏗️ Stack
 
-1. **Hero** — name, tagline, magnetic-hover portrait
-2. **About** — bio + skills grouped by Languages / Frameworks / Tools / AI
-3. **Services** — UI/UX Design, Web Design, Front-end Development, GenAI Integration
-4. **Projects** — sticky-stacking cards for AI Tutor, PiLearn, ResumeIQ, Notch
-5. **Contact** — Email, WhatsApp, LinkedIn, GitHub
+| Layer | Technology |
+|---|---|
+| Framework | React 18 + TypeScript |
+| Build | Vite |
+| Styling | Vanilla CSS (custom properties / design tokens) |
+| Animations | GSAP + CSS transitions |
+| Particles | Canvas 2D API |
+| Deploy | Vercel |
 
-## Run locally
-
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build → /dist
-npm run preview  # serve /dist locally
-```
-
-## Deploy to Vercel
-
-Push to GitHub → import the repo at [vercel.com/new](https://vercel.com/new) → click Deploy. No environment variables needed.
-
-## Project structure
+## 📁 Project Structure
 
 ```
 src/
-├── App.tsx                    # composes all sections
-├── main.tsx                   # React entry
-├── index.css                  # global styles + .hero-heading gradient
-└── components/
-    ├── HeroSection.tsx        # navbar, massive heading, magnetic portrait
-    ├── AboutSection.tsx       # bio, animated text, skills grid
-    ├── ServicesSection.tsx    # white section, 4 numbered services
-    ├── ProjectsSection.tsx    # sticky-stacking project cards
-    ├── ContactSection.tsx     # 4 contact methods with icons
-    │
-    ├── ContactButton.tsx      # gradient pill CTA
-    ├── LiveProjectButton.tsx  # ghost outline pill
-    ├── FadeIn.tsx             # whileInView animation wrapper
-    ├── Magnet.tsx             # mouse-following magnetic hover
-    └── AnimatedText.tsx       # char-by-char scroll-driven reveal
+├── data/
+│   └── portfolioData.ts           # ← All content lives here
+├── styles/
+│   ├── design-tokens.css           # Color, typography, spacing tokens
+│   ├── global.css                  # Reset, base styles, utilities
+│   └── components/                 # Component-specific CSS
+│       ├── hero.css
+│       ├── navigation.css
+│       ├── journey.css
+│       ├── work.css
+│       ├── impact.css
+│       ├── evolution.css
+│       ├── connect.css
+│       └── (shared effect styles)
+├── components/
+│   ├── Hero/Hero.tsx               # Full-bleed video hero
+│   ├── Navigation/Navigation.tsx   # Auto-hiding glassmorphic nav
+│   ├── Journey/Journey.tsx         # Scroll-driven text reveal + about
+│   ├── Work/Work.tsx               # Sticky-stacking project cards
+│   ├── Impact/Impact.tsx           # Metric grid + certifications
+│   ├── Evolution/Evolution.tsx     # Career timeline + roadmap
+│   ├── Connect/Connect.tsx         # Contact cards + CTA
+│   └── shared/
+│       ├── ParticleCanvas.tsx      # Floating particle system
+│       ├── CustomCursor.tsx        # Morphing cursor
+│       ├── ScrollReveal.tsx        # Scroll-triggered fade-in
+│       ├── TiltCard.tsx            # 3D perspective tilt
+│       ├── MagneticElement.tsx     # Magnetic hover effect
+│       └── AnimatedCounter.tsx     # Count-up animation
+├── App.tsx
+└── main.tsx
 ```
 
-## Featured projects
+## 🚀 Run Locally
 
-| Project | Live | Built with |
-|---|---|---|
-| ResumeIQ | [resumeiq-harsh.vercel.app](https://resumeiq-harsh.vercel.app) | React, Gemini API, Vercel |
-| Notch | [notch-zeta.vercel.app](https://notch-zeta.vercel.app) | React, Tailwind, Framer Motion |
+```bash
+npm install
+npm run dev        # → http://localhost:5173
+npm run build      # production build → /dist
+npm run preview    # serve /dist locally
+```
 
-## Customisation
+## 🌐 Deploy
 
-| Want to change | Open this file |
+Push to GitHub → import at [vercel.com/new](https://vercel.com/new) → Deploy. No environment variables needed.
+
+## ✏️ Customisation
+
+All content is centralized in **one file**: `src/data/portfolioData.ts`
+
+| Want to change | What to edit |
 |---|---|
-| Name, nav links, hero text | `src/components/HeroSection.tsx` |
-| About paragraph, skills list | `src/components/AboutSection.tsx` |
-| Services list | `src/components/ServicesSection.tsx` (`SERVICES` array) |
-| Projects, screenshots, live URLs | `src/components/ProjectsSection.tsx` (`PROJECTS` array) |
-| Contact methods | `src/components/ContactSection.tsx` (`CONTACT_METHODS` array) |
-| Project screenshots | drop new images in `public/` and reference as `/filename.png` |
-| Brand gradient, font, dark colour | `src/index.css` and `tailwind.config.js` |
-| Page title, meta description | `index.html` |
+| Name, role, tagline | `hero` object |
+| Company / location | `hero.meta` array |
+| About headline & narrative | `about` object |
+| Focus area tags | `about.focusAreas` array |
+| Projects | `projects` array |
+| Impact metrics | `metrics` array |
+| Certifications | `certifications` array |
+| Career timeline | `timeline` array |
+| Future roadmap | `roadmap` array |
+| Contact links | `contactLinks` array |
+| Colors & typography | `src/styles/design-tokens.css` |
 
-## Credits
+## 📄 License
 
-Designed & built by **Harsh Goyal** · [LinkedIn](https://www.linkedin.com/in/harsh-goyal-7900b2256/) · [GitHub](https://github.com/harshgoyal27)
+MIT
+
+---
+
+Designed & built by **K Sai Teja** · [LinkedIn](https://www.linkedin.com/in/sai-teja-3286941b8/) · [GitHub](https://github.com/sai7teja)

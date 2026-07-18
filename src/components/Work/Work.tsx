@@ -9,8 +9,8 @@ export default function Work() {
       <div className="section__inner">
         <ScrollReveal>
           <header className="work-header">
-            <span className="work-eyebrow">Selected Work</span>
-            <h2 className="work-title">Systems I've engineered</h2>
+            <span className="work-eyebrow">Experience</span>
+            <h2 className="work-title">Stuff I've shipped</h2>
           </header>
         </ScrollReveal>
 
@@ -45,7 +45,7 @@ export default function Work() {
 
                       <div className="work-card-bottom">
                         <div className="work-card-tech">
-                          <h4 className="work-card-section-title">Core Technologies</h4>
+                          <h4 className="work-card-section-title">Tech Used</h4>
                           <div className="work-tech-tags">
                             {project.technologies.map(tech => (
                               <span key={tech} className="work-tech-tag">{tech}</span>
@@ -54,7 +54,7 @@ export default function Work() {
                         </div>
 
                         <div className="work-card-impact">
-                          <h4 className="work-card-section-title">Business Impact</h4>
+                          <h4 className="work-card-section-title">What Changed</h4>
                           <ul className="work-impact-list">
                             {project.impact.map((item, i) => (
                               <li key={i} className="work-impact-item">{item}</li>

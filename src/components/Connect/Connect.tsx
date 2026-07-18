@@ -59,9 +59,9 @@ export default function Connect() {
     <section id="connect" className="connect-section">
       <div className="connect-content">
         <ScrollReveal>
-          <h2 className="connect-title">Let's build something that scales.</h2>
+          <h2 className="connect-title">Let's talk.</h2>
           <p className="connect-subtitle">
-            Whether it's cloud infrastructure, Kubernetes, or automation — I'm always open to interesting conversations.
+            Got an interesting problem? Building something cool? Or just want to say hi — I'm always up for a good conversation.
           </p>
         </ScrollReveal>
 

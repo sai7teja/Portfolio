@@ -31,8 +31,8 @@ export default function Impact() {
       <div className="section__inner">
         <ScrollReveal>
           <header className="impact-header">
-            <span className="work-eyebrow">Proof Points</span>
-            <h2 className="work-title">The numbers behind the systems</h2>
+            <span className="work-eyebrow">Impact</span>
+            <h2 className="work-title">By the numbers</h2>
           </header>
         </ScrollReveal>
 

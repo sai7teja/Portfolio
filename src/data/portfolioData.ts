@@ -7,7 +7,7 @@
 export const siteMetadata = {
   title: "Sai Teja — DevOps Engineer",
   description:
-    "Portfolio of K Sai Teja — a DevOps Engineer specializing in Kubernetes orchestration, cloud architecture, and infrastructure automation.",
+    "Portfolio of K Sai Teja — DevOps Engineer specializing in Kubernetes orchestration, cloud architecture, and infrastructure automation.",
   url: "https://saiteja.dev",
   image: "/og-image.png",
 };
@@ -28,10 +28,11 @@ export const hero = {
 
 /* ── Navigation ────────────────────────────────────────── */
 export const navLinks = [
-  { label: "Journey", href: "#journey" },
-  { label: "Work", href: "#work" },
+  { label: "About", href: "#journey" },
+  { label: "Experience", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "Impact", href: "#impact" },
-  { label: "Connect", href: "#connect" },
+  { label: "Say Hi", href: "#connect" },
 ];
 
 /* ── About / The Operator ──────────────────────────────── */
@@ -166,6 +167,32 @@ export const projects: Project[] = [
       "Balancing availability and cost optimization",
       "Designing security without compromising operational access",
     ],
+  },
+];
+
+/* ── Side Projects ─────────────────────────────────────── */
+export interface SideProject {
+  name: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+}
+
+export const sideProjects: SideProject[] = [
+  {
+    name: "Health Connect",
+    description:
+      "Health monitoring and connectivity platform — automates health data collection, analysis, and alerting through shell-based automation pipelines.",
+    technologies: ["Shell", "Linux", "Automation", "Monitoring"],
+    githubUrl: "https://github.com/sai7teja/Health-connect",
+  },
+  {
+    name: "ZeppOS Mini Program",
+    description:
+      "IoT wearable mini-program built for ZeppOS smartwatch platform — handles sensor data processing and real-time display on wearable devices.",
+    technologies: ["Python", "IoT", "ZeppOS", "Wearables"],
+    githubUrl: "https://github.com/sai7teja/ZeppOs-MinProgram",
   },
 ];
 

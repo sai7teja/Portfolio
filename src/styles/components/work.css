@@ -156,30 +156,91 @@
 }
 
 .side-projects-divider {
-  margin-top: var(--space-4xl);
-  margin-bottom: var(--space-2xl);
+  margin-top: var(--space-5xl);
+  margin-bottom: var(--space-3xl);
   padding-top: var(--space-3xl);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
+/* Animated glowing line */
 .side-projects-divider::before {
   content: '';
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: min(60%, 400px);
+  width: min(70%, 500px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-teal), transparent);
+  animation: lineGlow 3s ease-in-out infinite;
+}
+
+.side-projects-divider::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  box-shadow: 0 0 12px var(--accent-teal), 0 0 24px rgba(79, 209, 197, 0.3);
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.3; width: min(40%, 300px); }
+  50% { opacity: 0.8; width: min(70%, 500px); }
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  50% { transform: translateX(-50%) scale(1.5); opacity: 1; }
 }
 
 .side-projects-heading {
   font-family: var(--font-display);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-h3);
-  color: var(--text-secondary);
   text-align: center;
   margin: 0;
+  background: linear-gradient(
+    90deg,
+    var(--text-tertiary) 0%,
+    var(--text-primary) 20%,
+    var(--accent-teal) 40%,
+    var(--accent-primary) 60%,
+    var(--text-primary) 80%,
+    var(--text-tertiary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s linear infinite;
+}
+
+@keyframes textShimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side-projects-divider::before,
+  .side-projects-divider::after {
+    animation: none;
+  }
+  .side-projects-heading {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: var(--text-secondary);
+    color: var(--text-secondary);
+  }
 }
 
 @media (max-width: 768px) {

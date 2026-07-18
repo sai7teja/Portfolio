@@ -155,6 +155,33 @@
   flex-shrink: 0;
 }
 
+.side-projects-divider {
+  margin-top: var(--space-4xl);
+  margin-bottom: var(--space-2xl);
+  padding-top: var(--space-3xl);
+  position: relative;
+}
+
+.side-projects-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60%, 400px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
+}
+
+.side-projects-heading {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h3);
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .work-card-inner {
     padding: var(--space-xl);

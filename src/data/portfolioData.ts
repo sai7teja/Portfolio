@@ -30,7 +30,6 @@ export const hero = {
 export const navLinks = [
   { label: "About", href: "#journey" },
   { label: "Experience", href: "#work" },
-  { label: "Projects", href: "#projects" },
   { label: "Impact", href: "#impact" },
   { label: "Say Hi", href: "#connect" },
 ];
@@ -142,32 +141,6 @@ export const projects: Project[] = [
       "Balancing real-time monitoring with historical reporting needs",
     ],
   },
-  {
-    number: "05",
-    title: "Azure Cloud Architecture",
-    eyebrow: "Cloud Design Patterns",
-    summary:
-      "Designed secure, highly available Azure infrastructure patterns focused on availability, cost visibility, monitoring, identity, and operational control through the Cloud Architect Nanodegree program.",
-    technologies: [
-      "Azure",
-      "Load Balancers",
-      "Traffic Manager",
-      "Azure AD",
-      "RBAC",
-      "Key Vault",
-      "Sentinel",
-      "Log Analytics",
-    ],
-    impact: [
-      "Created reference architecture for production-grade cloud workloads",
-      "Improved readiness for Azure governance and reliability conversations",
-      "Designed scalable patterns with day-one monitoring",
-    ],
-    challenges: [
-      "Balancing availability and cost optimization",
-      "Designing security without compromising operational access",
-    ],
-  },
 ];
 
 /* ── Side Projects ─────────────────────────────────────── */
@@ -180,6 +153,13 @@ export interface SideProject {
 }
 
 export const sideProjects: SideProject[] = [
+  {
+    name: "Azure Cloud Architecture",
+    description:
+      "Designed secure, highly available Azure infrastructure patterns — HA, cost visibility, monitoring, identity management, and governance through the Udacity Cloud Architect Nanodegree.",
+    technologies: ["Azure", "Load Balancers", "Azure AD", "RBAC", "Key Vault", "Sentinel"],
+    githubUrl: "https://github.com/sai7teja/Cloud-Architect-Using-Microsoft-Azure-Nanodegree",
+  },
   {
     name: "Health Connect",
     description:
